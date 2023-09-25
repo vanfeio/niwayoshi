@@ -1,5 +1,18 @@
-<header>
-	<nav id="js-nav">
+
+<script>
+$(function () {
+	$('#hamburger').on('click', function () {
+	  $('.hamburger_menu').slideToggle(10)
+	  $('#hamburger').toggleClass('is_open')
+	});
+  });
+</script>
+
+<div class="logo"><a href="/"><img src="/img/common/logo.svg" alt="庭良"></a></div>
+<div id="hamburger"></div>
+<div class="hamburger_menu">
+	<div class="hamburger_logo"><a href="/"><img src="/img/common/logo.svg" alt="庭良"></a></div>
+	<nav>
 		<ul>
 			<li><a href="">庭良について</a></li>
 			<li><a href="">サービス</a></li>
@@ -9,4 +22,6 @@
 			<li><a href="">お問い合わせ</a></li>
 		</ul>
 	</nav>
-</header>
+</div>
+
+

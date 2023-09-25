@@ -236,7 +236,6 @@ template {
 ----------------------------------------------------*/
 html {
   font-size: 62.5%;
-  color: #404040;
   scroll-behavior: smooth;
   -moz-text-size-adjust: 100%;
        text-size-adjust: 100%;
@@ -247,7 +246,7 @@ body {
   position: relative;
   font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
   font-size: 1.4rem;
-  color: #111;
+  color: #404040;
   line-height: 1;
   background-color: #fff;
   overflow-x: hidden;
@@ -359,24 +358,131 @@ input:focus::placeholder {
 /*---------------------------------------------------
 		common
 ----------------------------------------------------*/
-header {
+header#header {
   width: 100%;
-  margin: 0 auto;
-  padding: 32px 57px 36px 40px;
+  padding: 16px 40px;
+  background: #fff;
+  position: fixed;
+  top: 0;
   display: flex;
-  flex-direction: column-reverse;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
+  z-index: 999;
 }
-header nav ul {
+@media screen and (max-width: 375px) {
+  header#header {
+    padding: 8px;
+  }
+}
+header#header .logo {
+  width: 100px;
+}
+@media screen and (max-width: 375px) {
+  header#header .logo {
+    width: 60px;
+  }
+}
+header#header #hamburger {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  header#header #hamburger {
+    display: block;
+    width: 27px;
+    height: 16px;
+    background: url(../img/common/menu_black.svg) no-repeat 0 0/contain;
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    z-index: 999;
+  }
+}
+header#header #hamburger.is_open {
+  background: url(../img/common/menu_close.svg) no-repeat 0 0/contain;
+  right: 8px;
+}
+@media screen and (max-width: 375px) {
+  header#header .hamburger_menu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+}
+header#header .hamburger_menu .hamburger_logo {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  header#header .hamburger_menu .hamburger_logo {
+    display: block;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 60px;
+  }
+}
+header#header nav {
+  font-family: "fot-tsukuaoldmin-pr6n", sans-serif;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 375px) {
+  header#header nav {
+    font-size: 2rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+  }
+  header#header nav::after {
+    content: "";
+    background: url(../img/common/logo.svg) no-repeat center center/contain;
+    width: 80%;
+    height: 50vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 20vh;
+    opacity: 0.1;
+  }
+}
+header#header nav ul {
   display: flex;
 }
-header nav li {
+@media screen and (max-width: 375px) {
+  header#header nav ul {
+    display: block;
+  }
+}
+header#header nav li {
   margin-left: 50px;
 }
-header nav a {
-  font-size: 1.8rem;
-  font-weight: bold;
+@media screen and (max-width: 375px) {
+  header#header nav li {
+    margin: 0 0 24px;
+    text-align: center;
+  }
+}
+header#header.display {
+  background: none;
+}
+header#header.display a {
+  color: white;
+}
+@media screen and (max-width: 375px) {
+  header#header.display a {
+    color: #404040;
+  }
+}
+header#header.display .logo {
+  opacity: 0;
+}
+header#header.display #hamburger {
+  background: url(../img/common/menu_white.svg) no-repeat 0 0/contain;
 }
 
 footer {
@@ -387,6 +493,7 @@ footer {
   align-items: center;
   display: flex;
   place-content: flex-start;
+  font-family: "fot-tsukuaoldmin-pr6n", sans-serif;
 }
 @media screen and (max-width: 375px) {
   footer {
@@ -553,6 +660,7 @@ a.link {
   letter-spacing: 1em;
   font-size: 7.5rem;
   width: 1em;
+  font-family: "fot-tsukuaoldmin-pr6n", sans-serif;
 }
 
 .desc {
@@ -567,6 +675,7 @@ a.link {
   -o-object-fit: scale-down;
      object-fit: scale-down;
   background: url(../img/common/consultation_bg.png) no-repeat center center/cover;
+  background-attachment: fixed;
   padding: 137px 110px;
   display: flex;
   color: white;
@@ -577,6 +686,7 @@ a.link {
 @media screen and (max-width: 375px) {
   .consultation {
     background: url(../img/common/consultation_bg_sp.png) no-repeat center center/cover;
+    background-attachment: fixed;
     height: 310px;
     padding: 0;
     padding-top: 84px;
@@ -587,6 +697,7 @@ a.link {
 }
 .consultation div.text {
   font-size: 5rem;
+  font-family: "fot-tsukuaoldmin-pr6n", sans-serif;
 }
 @media screen and (max-width: 375px) {
   .consultation div.text {
@@ -1181,16 +1292,6 @@ a.link {
 .info ul.info_list li .date {
   margin-right: 31px;
 }
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-header a {
-  color: white;
-}
-
 .mv {
   position: relative;
   margin: 0 auto;

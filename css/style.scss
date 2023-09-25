@@ -242,6 +242,7 @@ $white: white;
 $black: #000;
 $dark: #111;
 $line: #d9d9d9;
+$font: "fot-tsukuaoldmin-pr6n", sans-serif;
 
 @mixin btn_circle {
 	border-radius: 100px;
@@ -269,7 +270,6 @@ $line: #d9d9d9;
 
 html {
 	font-size: 62.5%;
-	color:#404040;
 	scroll-behavior: smooth;
 	text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -280,7 +280,7 @@ body {
 	//font-family: "Helvetica Neue",'Noto Sans JP',Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
 	font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
 	font-size: 1.4rem;
-	color: #111;
+	color:#404040;
 	line-height: 1;
 	background-color: #fff;
 	overflow-x: hidden;
@@ -393,29 +393,120 @@ input:focus::placeholder {
 		common
 ----------------------------------------------------*/
 header {
-	width: 100%;
-	margin: 0 auto;
-	padding: 32px 57px 36px 40px;
-	display: flex;
-	flex-direction: column-reverse;
-	justify-content: space-between;
-	align-items: end;
-
-	nav {
-		ul {
-			display: flex;
+	&#header {
+		width: 100%;
+		padding: 16px 40px;
+		background: #fff;
+		position: fixed;
+		top: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 999;
+		@media screen and (max-width: $bp-sp) {
+			padding: 8px;
 		}
-
-		li {
-			margin-left: 50px;
+		.logo {
+			width: 100px;
+			@media screen and (max-width: $bp-sp) {
+				width: 60px;
+			}
 		}
-
-		a {
-			font-size: 1.8rem;
-			font-weight: bold;
+		#hamburger {
+			display: none;
+			@media screen and (max-width: $bp-sp) {
+				display: block;
+				width: 27px;
+				height: 16px;
+				background: url(../img/common/menu_black.svg) no-repeat 0 0 / contain;
+				position: fixed;
+				right: 16px;
+				top: 16px;
+				z-index: 999;
+			}
+			&.is_open {
+				background: url(../img/common/menu_close.svg) no-repeat 0 0 / contain;
+				right: 8px;
+			}
 		}
+		.hamburger_menu {
+			@media screen and (max-width: $bp-sp) {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			
+			.hamburger_logo {
+				display: none;
+				@media screen and (max-width: $bp-sp) {
+					display: block;
+					position: absolute;
+					left: 8px;
+					top: 8px;
+					width: 60px;
+				}
+			}
+		}
+		nav {
+			font-family: $font;
+			font-size: 1.6rem;
+			@media screen and (max-width: $bp-sp) {
+				font-size: 2rem;
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: $white;
+				&::after {
+					content: '';
+					background: url(../img/common/logo.svg) no-repeat center center / contain;
+					width: 80%;
+					height: 50vh;
+					position: absolute;
+					left: 0;
+					right: 0;
+					margin: auto;
+					top: 20vh;
+					opacity: .1;
+				}
+			}
+			ul {
+				display: flex;
+				@media screen and (max-width: $bp-sp) {
+					display: block;
+				}
+			}
+			li {
+				margin-left: 50px;
+				@media screen and (max-width: $bp-sp) {
+					margin: 0 0 24px;
+					text-align: center;
+				}
+			}
+		}
+		&.display {
+			background: none;
+			a {
+				color: $white;
+				@media screen and (max-width: $bp-sp) {
+					color: #404040;
+				}
+			}
+			.logo {
+				opacity: 0;
+			}
+			#hamburger {
+				background: url(../img/common/menu_white.svg) no-repeat 0 0 / contain;
+			}
+		}
+		
 	}
 }
+
 footer {
 	width: 100%;
 	margin: 0 auto;
@@ -424,6 +515,7 @@ footer {
 	align-items: center;
 	display: flex;
     place-content: flex-start;
+	font-family: $font;
 	@media screen and (max-width: $bp-sp) {
 		height:310px;
 		place-content: initial;
@@ -584,6 +676,7 @@ a.link{
 	letter-spacing: 1em;
 	font-size: 7.5rem;
 	width: 1em;
+	font-family: $font;
 }
 
 .desc {
@@ -598,6 +691,7 @@ a.link{
 	width: 100%;
 	object-fit: scale-down;
 	background: url(../img/common/consultation_bg.png) no-repeat center center/cover;
+	background-attachment: fixed;
 	padding: 137px 110px;
 	display: flex;
 	color:white;
@@ -606,6 +700,7 @@ a.link{
 	gap:4.2rem;
 	@media screen and (max-width: $bp-sp) {
 		background: url(../img/common/consultation_bg_sp.png) no-repeat center center/cover;
+		background-attachment: fixed;
 		height: 310px;
 		padding:0;
 		padding-top:84px;
@@ -616,6 +711,7 @@ a.link{
 	}
 	div.text{
 		font-size: 5rem;
+		font-family: $font;
 		@media screen and (max-width: $bp-sp) {
 			font-size: 2.4rem;
 			margin:0 auto;
@@ -1167,16 +1263,6 @@ a.link{
 	}
 }
 
-header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2;
-
-	a {
-		color: $white;
-	}
-}
 
 .mv {
 	position: relative;
