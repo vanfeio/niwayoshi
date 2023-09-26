@@ -604,7 +604,7 @@ h2 {
 	font-size: 4rem;
 	text-align: center;
 	font-family: $font;
-	margin: 4em 0 2em;
+	margin: 5em 0 2em;
 	font-weight: normal;
 	@media screen and (max-width: $bp-sp) {
 		margin: 3em 0 2em;
@@ -1292,7 +1292,7 @@ a.link{
 
 #contact {
 	.form {
-		max-width: 632px;
+		max-width: 630px;
 		margin: 0 auto;
 		font-size: 2rem;
         @media screen and (max-width: $bp-sp) {
@@ -1404,4 +1404,34 @@ a.link{
         }
     }
 
+}
+
+//conmany
+
+#company {
+	font-size: 1.6rem;
+	@media screen and (max-width: $bp-sp) {
+		font-size: 1.3rem;
+	}
+	dl {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 630px;
+		margin: 0 auto 150px;
+		border-top: 1px solid $line;
+		@media screen and (max-width: $bp-sp) {
+			max-width: 90%;
+			margin: 0 auto 80px;
+		}
+	}
+	dt {
+		width: 30%;
+		border-bottom: 1px solid $line;
+		padding: 1.5em 0;
+	}
+	dd {
+		width: 70%;
+		border-bottom: 1px solid $line;
+		padding: 1.5em 0;
+	}
 }

@@ -593,7 +593,7 @@ h2 {
   font-size: 4rem;
   text-align: center;
   font-family: "fot-tsukuaoldmin-pr6n", sans-serif;
-  margin: 4em 0 2em;
+  margin: 5em 0 2em;
   font-weight: normal;
 }
 @media screen and (max-width: 375px) {
@@ -1318,7 +1318,7 @@ a.link {
 }
 
 #contact .form {
-  max-width: 632px;
+  max-width: 630px;
   margin: 0 auto;
   font-size: 2rem;
 }
@@ -1438,4 +1438,36 @@ a.link {
 #contact .form input[type=submit][disabled] {
   background-color: #666;
   cursor: default;
+}
+
+#company {
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 375px) {
+  #company {
+    font-size: 1.3rem;
+  }
+}
+#company dl {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 630px;
+  margin: 0 auto 150px;
+  border-top: 1px solid #d9d9d9;
+}
+@media screen and (max-width: 375px) {
+  #company dl {
+    max-width: 90%;
+    margin: 0 auto 80px;
+  }
+}
+#company dt {
+  width: 30%;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 1.5em 0;
+}
+#company dd {
+  width: 70%;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 1.5em 0;
 }/*# sourceMappingURL=style.css.map */
