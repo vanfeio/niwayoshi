@@ -237,7 +237,7 @@ template {
 		base
 ----------------------------------------------------*/
 //$bp-sp: 768px;
-$bp-sp: 375px;
+$bp-sp: 768px;
 $white: white;
 $black: #000;
 $dark: #111;
@@ -273,6 +273,10 @@ html {
 	scroll-behavior: smooth;
 	text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+	visibility: hidden;
+	&.wf-active {
+		visibility: visible;
+	}
 }
 
 body {
@@ -616,6 +620,9 @@ h3 {
 	font-size: 3rem;
 	font-weight: 500;
 	margin-bottom: 1em;
+	@media screen and (max-width: $bp-sp) {
+		font-size: 2rem;
+	}
 }
 
 p {
@@ -1406,7 +1413,7 @@ a.link{
 
 }
 
-//conmany
+//company
 
 #company {
 	font-size: 1.6rem;
@@ -1433,5 +1440,85 @@ a.link{
 		width: 70%;
 		border-bottom: 1px solid $line;
 		padding: 1.5em 0;
+	}
+}
+
+//company
+#exsample {
+	#slider_img {
+		counter-reset: number 0;
+		margin-bottom: 80px;
+		img {
+			width: 100%;
+			height: 600px;
+			object-fit: cover;
+			@media screen and (max-width: $bp-sp) {
+				height: 400px;
+			}
+		}
+		li {
+			position: relative;
+		}
+		.num {
+			-ms-writing-mode: tb-rl;
+			writing-mode: vertical-rl;
+			position: absolute;
+			left: -20px;
+			top: 0;
+			font-size: 1.4rem;
+			&::before {
+				counter-increment: number 1;
+				content: '#'counter(number);
+				margin-bottom: 10px;
+			}
+			@media screen and (max-width: $bp-sp) {
+				display: none;
+			}
+		}
+		.slick-slide {
+			margin-right: 2vw!important;
+			margin-left: 2vw!important;
+			@media screen and (max-width: $bp-sp) {
+				margin: 0!important;
+			}
+		}
+		.slick-dots {
+			bottom: -30px;
+			button:before {
+				font-size: 12px;
+			}
+			li.slick-active {
+				button:before {
+					color: #000!important;
+				}
+			}
+		}
+		.slick-list {
+			@media screen and (max-width: $bp-sp) {
+				padding: 0!important;
+			}
+		}
+	}
+	#slider_text {
+		margin-bottom: 100px;
+		.slick-slide {
+			margin-right: 2vw!important;
+			margin-left: 2vw!important;
+			opacity: 0;
+			@media screen and (max-width: $bp-sp) {
+				margin: 0!important;
+			}
+			&.slick-current {
+				opacity: 1;
+			}
+		}
+		.category {
+			font-size: 1.6rem;
+			text-decoration: underline;
+			margin-bottom: 1em;
+			@media screen and (max-width: $bp-sp) {
+				font-size: 1.4rem;
+			}
+		}
 	}
 }

@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>施工事例　｜　庭良</title>
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/slick.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="/js/script.js"></script>
+	<script type="text/javascript" src="/js/slick.min.js"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<script>
+		(function (d) {
+			var config = {
+				kitId: 'vha3kyx',
+				scriptTimeout: 3000,
+				async: true
+			},
+				h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+
+</head>
+
+<body id="exsample">
+	<header id="header"></header>
+
+	<h2>施工事例</h2>
+	<div class="slider_box">
+		<ul id="slider_img">
+			<li>
+				<div class="num">施工事例名</div>
+				<div class="img">
+					<img src="img/exsample/exsample_01.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="num">施工事例名</div>
+				<div class="img">
+					<img src="img/exsample/exsample_02.jpg" alt="">
+				</div>
+			</li>
+			<li>
+				<div class="num">施工事例名</div>
+				<div class="img">
+					<img src="img/exsample/exsample_03.jpg" alt="">
+				</div>
+			</li>
+		</ul>
+		<ul id="slider_text">
+			<li>
+				<h3>施工事例名</h3>
+				<div class="category">#造園</div>
+				<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+			</li>
+			<li>
+				<h3>施工事例名</h3>
+				<div class="category">#造園</div>
+				<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+			</li>
+			<li>
+				<h3>施工事例名</h3>
+				<div class="category">#造園</div>
+				<p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+			</li>
+		</ul>
+	</div>
+	
+
+	<div id="consulation"></div>
+	<div id="footer"></div>
+</body>
+
+<script>
+    $('#slider_img').slick({
+        autoplay: false, 
+        dots: true,
+		arrows: false,
+        infinite: true, 
+        pauseOnHover: false,
+		centerPadding:"30%",
+		asNavFor:"#slider_text",
+		responsive: [
+		{
+			breakpoint: 768, 
+			settings: {
+				centerPadding:"0%",
+				slidesToShow: 1,
+				infinite: false, 
+			},
+		},
+		],
+    })
+	$("#slider_text").slick({
+		draggable:false,
+		arrows:false,
+		dots: false,
+		centerPadding:"0%",
+		slidesToShow: 1,
+	})
+</script>
+
+</html>

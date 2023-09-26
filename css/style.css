@@ -239,6 +239,10 @@ html {
   -moz-text-size-adjust: 100%;
        text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  visibility: hidden;
+}
+html.wf-active {
+  visibility: visible;
 }
 
 body {
@@ -292,7 +296,7 @@ button {
   color: #3b3b3b;
   cursor: pointer;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   a,
   button {
     transition: 0s;
@@ -303,7 +307,7 @@ a:hover,
 button:hover {
   opacity: 0.7;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   a:hover,
   button:hover {
     opacity: 1;
@@ -368,7 +372,7 @@ header#header {
   align-items: center;
   z-index: 999;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   header#header {
     padding: 8px;
   }
@@ -376,7 +380,7 @@ header#header {
 header#header .logo {
   width: 100px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   header#header .logo {
     width: 60px;
   }
@@ -384,7 +388,7 @@ header#header .logo {
 header#header #hamburger {
   display: none;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   header#header #hamburger {
     display: block;
     width: 27px;
@@ -400,7 +404,7 @@ header#header #hamburger.is_open {
   background: url(../img/common/menu_close.svg) no-repeat 0 0/contain;
   right: 8px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   header#header .hamburger_menu {
     width: 100%;
     height: 100%;
@@ -413,7 +417,7 @@ header#header #hamburger.is_open {
 header#header .hamburger_menu .hamburger_logo {
   display: none;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   header#header .hamburger_menu .hamburger_logo {
     display: block;
     position: absolute;
@@ -426,7 +430,7 @@ header#header nav {
   font-family: "fot-tsukuaoldmin-pr6n", sans-serif;
   font-size: 1.6rem;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   header#header nav {
     font-size: 2rem;
     width: 100%;
@@ -452,7 +456,7 @@ header#header nav {
 header#header nav ul {
   display: flex;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   header#header nav ul {
     display: block;
   }
@@ -460,7 +464,7 @@ header#header nav ul {
 header#header nav li {
   margin-left: 50px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   header#header nav li {
     margin: 0 0 24px;
     text-align: center;
@@ -472,7 +476,7 @@ header#header.display {
 header#header.display a {
   color: white;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   header#header.display a {
     color: #404040;
   }
@@ -494,7 +498,7 @@ footer {
   place-content: flex-start;
   font-family: "fot-tsukuaoldmin-pr6n", sans-serif;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   footer {
     height: 310px;
     place-content: initial;
@@ -507,7 +511,7 @@ footer .logo {
   width: 98px;
   height: 54px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   footer .logo {
     margin: 0 auto;
   }
@@ -521,7 +525,7 @@ footer .logo img {
 footer nav {
   flex: 1;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   footer nav {
     flex: initial;
     margin-top: 51px;
@@ -543,7 +547,7 @@ footer nav {
 footer nav ul {
   display: flex;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   footer nav ul {
     display: block;
   }
@@ -552,7 +556,7 @@ footer nav li {
   margin-left: 50px;
   list-style: none;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   footer nav li {
     display: inline-block;
     width: auto;
@@ -562,7 +566,7 @@ footer nav li {
 footer nav a {
   font-size: 1.8rem;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   footer nav a {
     font-size: 1.4rem;
   }
@@ -571,7 +575,7 @@ footer .copyright {
   float: right;
   font-size: 1.6rem;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   footer .copyright {
     font-size: 1.2rem;
     bottom: 0;
@@ -596,7 +600,7 @@ h2 {
   margin: 5em 0 2em;
   font-weight: normal;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   h2 {
     margin: 3em 0 2em;
     font-size: 3rem;
@@ -607,6 +611,11 @@ h3 {
   font-size: 3rem;
   font-weight: 500;
   margin-bottom: 1em;
+}
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 2rem;
+  }
 }
 
 p {
@@ -670,7 +679,7 @@ a.link {
   align-items: center;
   gap: 4.2rem;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .consultation {
     background: url(../img/common/consultation_bg_sp.png) no-repeat center center/cover;
     background-attachment: fixed;
@@ -686,7 +695,7 @@ a.link {
   font-size: 5rem;
   font-family: "fot-tsukuaoldmin-pr6n", sans-serif;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .consultation div.text {
     font-size: 2.4rem;
     margin: 0 auto;
@@ -697,7 +706,7 @@ a.link {
   font-size: 3rem;
   text-decoration: none;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .consultation a.link {
     font-size: 1.6rem;
     width: 335px;
@@ -715,7 +724,7 @@ a.link {
   position: relative;
   overflow: hidden;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .about {
     height: 925px;
     padding: 0;
@@ -727,7 +736,7 @@ a.link {
   margin: 0 auto;
   height: 100%;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .about .wrap {
     width: 100%;
   }
@@ -738,7 +747,7 @@ a.link {
   right: 159px;
   height: 426px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .about .wrap .desc_1 {
     position: relative;
     top: auto;
@@ -755,7 +764,7 @@ a.link {
   height: 482px;
   display: block;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .about .wrap .img_1 {
     top: auto;
     left: 0;
@@ -771,7 +780,7 @@ a.link {
   width: 450px;
   height: 243px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .about .wrap .img_2 {
     top: 509px;
     margin: 0 auto;
@@ -791,7 +800,7 @@ a.link {
   width: 450px;
   line-height: 2em;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .about .wrap .desc_2 {
     position: absolute;
     top: 671px;
@@ -809,7 +818,7 @@ a.link {
   right: 0;
   width: 450px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .about .wrap .link_1 {
     top: 811px;
     width: 335px;
@@ -826,7 +835,7 @@ a.link {
   margin: 0 auto;
   padding: 166px 0 192px 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list {
     height: 2328px;
     width: 100%;
@@ -839,7 +848,7 @@ a.link {
   margin: 0 auto;
   height: 633px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list .zouen {
     height: 682px;
   }
@@ -848,7 +857,7 @@ a.link {
   width: 100%;
   height: auto;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list .zouen .img_1 {
     height: auto;
     -o-object-fit: scale-down;
@@ -861,7 +870,7 @@ a.link {
   left: 60px;
   height: 216px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list .zouen .title {
     position: absolute;
     top: 321px;
@@ -877,7 +886,7 @@ a.link {
   top: 478px;
   left: 200px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list .zouen .desc_1 {
     position: relative;
     top: 85px;
@@ -894,7 +903,7 @@ a.link {
   position: relative;
   margin: 0 auto;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list .gaikoukouji {
     height: 845px;
     width: 100%;
@@ -907,7 +916,7 @@ a.link {
   width: 400px;
   height: 439px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list .gaikoukouji .img_1 {
     width: 100%;
     height: auto;
@@ -922,7 +931,7 @@ a.link {
   top: 37px;
   height: 466px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list .gaikoukouji .title {
     position: absolute;
     top: 303px;
@@ -946,7 +955,7 @@ a.link {
   top: 0.4em;
   position: relative;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list .gaikoukouji .desc_1 {
     position: relative;
     top: 175px;
@@ -965,7 +974,7 @@ a.link {
   position: relative;
   margin: 0 auto;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list .taiyou {
     height: 800px;
     width: 100%;
@@ -977,7 +986,7 @@ a.link {
   width: 400px;
   height: 523px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list .taiyou .img_1 {
     width: 100%;
     height: auto;
@@ -998,7 +1007,7 @@ a.link {
   top: 0.4em;
   position: relative;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list .taiyou .desc_1 {
     float: initial;
     width: 335px;
@@ -1013,7 +1022,7 @@ a.link {
   height: 466px;
   line-height: 1em;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .list .taiyou .title {
     position: absolute;
     top: 325px;
@@ -1034,7 +1043,7 @@ a.link {
   height: 1125px;
   padding-top: 154px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .sekoujirei {
     height: 783px;
     width: 100%;
@@ -1048,7 +1057,7 @@ a.link {
   max-height: 566px;
   position: relative;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .sekoujirei ul.slider {
     position: absolute;
     width: 100%;
@@ -1066,7 +1075,7 @@ a.link {
   right: 110px;
   height: 100%;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .sekoujirei ul.slider li {
     right: initial;
     top: initial;
@@ -1077,7 +1086,7 @@ a.link {
   position: relative;
   display: block;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .sekoujirei ul.slider li .img_1 {
     max-height: initial;
   }
@@ -1089,7 +1098,7 @@ a.link {
   -o-object-position: top;
      object-position: top;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .sekoujirei ul.slider li .img_1 img {
     height: 100%;
     -o-object-fit: scale-down;
@@ -1104,7 +1113,7 @@ a.link {
   margin-top: 1.6em;
   position: relative;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .sekoujirei .wrap {
     width: 100%;
     height: 100%;
@@ -1119,7 +1128,7 @@ a.link {
   left: 0;
   margin-bottom: 2.2rem;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .sekoujirei .wrap .title {
     top: 19px;
     left: 50%;
@@ -1134,7 +1143,7 @@ a.link {
   width: 200px;
   left: 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .sekoujirei .wrap .link_1 {
     position: absolute;
     bottom: 38px;
@@ -1153,7 +1162,7 @@ a.link {
   top: 37px;
   left: 331px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .sekoujirei .wrap .details {
     top: 389px;
     height: 237px;
@@ -1173,7 +1182,7 @@ a.link {
 .sekoujirei .wrap .sub_title {
   font-size: 2rem;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .sekoujirei .wrap .sub_title {
     font-size: 1.6rem;
   }
@@ -1182,7 +1191,7 @@ a.link {
   text-decoration: underline;
   margin-top: 20px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .sekoujirei .wrap .hash_tag {
     font-size: 1.4rem;
   }
@@ -1192,7 +1201,7 @@ a.link {
   width: 100%;
   line-height: 2em;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .sekoujirei .wrap .desc_1 {
     font-size: 1.2rem;
   }
@@ -1202,7 +1211,7 @@ a.link {
   padding: 121px 0;
   margin: 0 auto;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .info {
     width: 335px;
     height: 491px;
@@ -1216,7 +1225,7 @@ a.link {
   margin: 0 auto;
   position: relative;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .info .wrap {
     width: 100%;
     height: 100%;
@@ -1229,7 +1238,7 @@ a.link {
   float: left;
   left: 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .info .title {
     font-size: 3rem;
     float: initial;
@@ -1243,7 +1252,7 @@ a.link {
   width: 200px;
   right: 0;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .info .link_1 {
     right: initial;
     float: initial;
@@ -1256,7 +1265,7 @@ a.link {
   padding-top: 141px;
   width: 100%;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .info ul.info_list {
     padding: 0;
     margin-top: 4px;
@@ -1267,7 +1276,7 @@ a.link {
   padding-top: 39.5px;
   padding-bottom: 25.5px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .info ul.info_list li {
     padding-top: 22px;
     padding-bottom: 22px;
@@ -1295,7 +1304,7 @@ a.link {
   height: 100vh;
   background: url(../img/top/mv_bg.png) no-repeat center center/cover;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .mv_wrap {
     background: url(../img/top/mv_bg_sp.png) no-repeat center center/cover;
   }
@@ -1322,7 +1331,7 @@ a.link {
   margin: 0 auto;
   font-size: 2rem;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   #contact .form {
     font-size: 1.4rem;
     max-width: 90%;
@@ -1334,7 +1343,7 @@ a.link {
 #contact .form dd {
   margin-bottom: 1.5em;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   #contact .form dd {
     margin-bottom: 1em;
   }
@@ -1427,7 +1436,7 @@ a.link {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   #contact .form input[type=submit] {
     width: 80%;
     padding: 1em 0;
@@ -1443,7 +1452,7 @@ a.link {
 #company {
   font-size: 1.6rem;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   #company {
     font-size: 1.3rem;
   }
@@ -1455,7 +1464,7 @@ a.link {
   margin: 0 auto 150px;
   border-top: 1px solid #d9d9d9;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   #company dl {
     max-width: 90%;
     margin: 0 auto 80px;
@@ -1470,4 +1479,89 @@ a.link {
   width: 70%;
   border-bottom: 1px solid #d9d9d9;
   padding: 1.5em 0;
+}
+
+#exsample #slider_img {
+  counter-reset: number 0;
+  margin-bottom: 80px;
+}
+#exsample #slider_img img {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  #exsample #slider_img img {
+    height: 400px;
+  }
+}
+#exsample #slider_img li {
+  position: relative;
+}
+#exsample #slider_img .num {
+  writing-mode: vertical-rl;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  font-size: 1.4rem;
+}
+#exsample #slider_img .num::before {
+  counter-increment: number 1;
+  content: "#" counter(number);
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  #exsample #slider_img .num {
+    display: none;
+  }
+}
+#exsample #slider_img .slick-slide {
+  margin-right: 2vw !important;
+  margin-left: 2vw !important;
+}
+@media screen and (max-width: 768px) {
+  #exsample #slider_img .slick-slide {
+    margin: 0 !important;
+  }
+}
+#exsample #slider_img .slick-dots {
+  bottom: -30px;
+}
+#exsample #slider_img .slick-dots button:before {
+  font-size: 12px;
+}
+#exsample #slider_img .slick-dots li.slick-active button:before {
+  color: #000 !important;
+}
+@media screen and (max-width: 768px) {
+  #exsample #slider_img .slick-list {
+    padding: 0 !important;
+  }
+}
+#exsample #slider_text {
+  margin-bottom: 100px;
+}
+#exsample #slider_text .slick-slide {
+  margin-right: 2vw !important;
+  margin-left: 2vw !important;
+  opacity: 0;
+}
+@media screen and (max-width: 768px) {
+  #exsample #slider_text .slick-slide {
+    margin: 0 !important;
+  }
+}
+#exsample #slider_text .slick-slide.slick-current {
+  opacity: 1;
+}
+#exsample #slider_text .category {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 768px) {
+  #exsample #slider_text .category {
+    font-size: 1.4rem;
+  }
 }/*# sourceMappingURL=style.css.map */
