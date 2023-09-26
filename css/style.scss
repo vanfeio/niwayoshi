@@ -1293,10 +1293,6 @@ a.link{
 
 //contact
 
-.form {
-	background: 000;
-}
-
 #contact {
 	.form {
 		max-width: 630px;
@@ -1521,4 +1517,33 @@ a.link{
 			}
 		}
 	}
+}
+
+//news
+#news {
+	.news {
+		margin-bottom: 200px;
+		@media screen and (max-width: $bp-sp) {
+			margin-bottom: 80px;
+			width: 90%;
+		}
+		li {
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid $line;
+			padding: 2em 0 1em;
+			@media screen and (max-width: $bp-sp) {
+				display: block;
+				padding: 1em 0;
+			}
+			.date {
+				font-size: 1.4rem;
+				margin-right: 1em;
+				@media screen and (max-width: $bp-sp) {
+					margin: 0 0 .5em;
+				}
+			}
+		}
+	}
+	
 }

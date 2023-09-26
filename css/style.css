@@ -1322,10 +1322,6 @@ a.link {
   letter-spacing: 0.2em;
 }
 
-.form {
-  background: 0;
-}
-
 #contact .form {
   max-width: 630px;
   margin: 0 auto;
@@ -1563,5 +1559,36 @@ a.link {
 @media screen and (max-width: 768px) {
   #exsample #slider_text .category {
     font-size: 1.4rem;
+  }
+}
+
+#news .news {
+  margin-bottom: 200px;
+}
+@media screen and (max-width: 768px) {
+  #news .news {
+    margin-bottom: 80px;
+    width: 90%;
+  }
+}
+#news .news li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 2em 0 1em;
+}
+@media screen and (max-width: 768px) {
+  #news .news li {
+    display: block;
+    padding: 1em 0;
+  }
+}
+#news .news li .date {
+  font-size: 1.4rem;
+  margin-right: 1em;
+}
+@media screen and (max-width: 768px) {
+  #news .news li .date {
+    margin: 0 0 0.5em;
   }
 }/*# sourceMappingURL=style.css.map */
