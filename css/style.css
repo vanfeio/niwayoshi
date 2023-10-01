@@ -451,6 +451,7 @@ header#header nav {
     margin: auto;
     top: 20vh;
     opacity: 0.1;
+    pointer-events: none;
   }
 }
 header#header nav ul {
