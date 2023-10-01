@@ -1038,23 +1038,32 @@ a.link{
 
 	ul.slider{
 		left:0;
-		width:auto;
-		max-height:566px;
+		max-width:1290px;
+		//max-height:566px;
 		position: relative;
 		@media screen and (max-width: $bp-sp) {
+			position:relative;
+			width:100%;
+			height:240px;
+			margin-top: 30px;
+			/*
 			position:absolute;
 			width:100%;
 			height:240px;
+			left:0;
+			top:84px;
+			*/
+			/*
 			left: 50%;
 			transform: translateX(-50%);
 			-webkit-transform: translateX(-50%);
 			-ms-transform: translateX(-50%);
-			top:84px;
+			*/
 		}		
 		li{
 			position: relative;
 			top:0;
-			right: 110px;
+			//right: 110px;
 			height:100%;
 			@media screen and (max-width: $bp-sp) {
 				right:initial;
@@ -1064,7 +1073,7 @@ a.link{
 			.img_1{
 			//margin-top: 154px;
 			//padding-right:110px;
-			height: 556px;
+			max-height: 556px;
 			position: relative;
 			display: block;
 			@media screen and (max-width: $bp-sp) {
@@ -1086,6 +1095,19 @@ a.link{
 		}
 
 	}
+	.title.no_pc{
+		@media screen and (max-width: $bp-sp) {
+			font-size: 3rem;
+			width:200px;
+			letter-spacing: 0;
+			margin-bottom:2.2rem;			
+			top:19px;
+			position: relative;
+			margin: 0 auto;
+			text-align: center;
+			display: block;
+		}		
+	}
 	.wrap{
 		width:900px;
 		margin: 0 auto;
@@ -1104,6 +1126,7 @@ a.link{
 			letter-spacing: 0;
 			left:0;
 			margin-bottom:2.2rem;
+			/*
 			@media screen and (max-width: $bp-sp) {
 				top:19px;
 				left: 50%;
@@ -1113,13 +1136,14 @@ a.link{
 				margin: 0;
 			    text-align: center;
 			}
+			*/
 		}
 		.link_1{
 			width:200px;
 			left:0;
 			@media screen and (max-width: $bp-sp) {
 				position: absolute;
-				bottom:38px;
+				bottom:368px;
 				left: 50%;
 				transform: translateX(-50%);
 				-webkit-transform: translateX(-50%);
@@ -1135,7 +1159,7 @@ a.link{
 			top:37px;
 			left:331px;
 			@media screen and (max-width: $bp-sp) {
-				top:389px;
+				top: 0;
 				height:237px;
 				width:335px;
 				left: 50%;
@@ -1173,6 +1197,94 @@ a.link{
 			}
 		}
 	}
+
+	.slick-list{
+		padding:0;
+	}
+	.slick-dots {
+		position: relative !important;
+		bottom: 0;
+		padding-top:20px;
+		display: flex;
+		justify-content: end;
+		@media screen and (max-width: $bp-sp) {
+			display: block;
+		}
+
+		li{
+			width: 14px !important;
+			height: 14px !important;				
+			margin:0 14px !important;
+			@media screen and (max-width: $bp-sp) {
+				margin:0 7px !important;
+			}
+			&::before{
+				content: '';
+				width:300%;
+				height:1px;
+				display: inline-block;
+				background-color: #2F2F2F;
+				position: absolute;
+				top: calc(50%);
+				left: 50%;
+				transform: translateX(-50%);
+				-webkit-transform: translateX(-50%);
+				-ms-transform: translateX(-50%);
+			}
+			&:first-child{
+				margin:0 !important;
+				margin-right:14px !important;
+
+				@media screen and (max-width: $bp-sp) {
+					margin-right:7px !important;
+				}
+				&::before{
+					width:100%;
+					transform: inherit;
+					-webkit-transform: inherit;
+					-ms-transform: inherit;
+						left: 14px;
+					@media screen and (max-width: $bp-sp) {
+						left: 7px;
+					}
+				}
+			
+			}
+			&:last-child{
+				margin:0 !important;
+				margin-left:14px !important;
+
+				@media screen and (max-width: $bp-sp) {
+					margin-left:7px !important;
+				}
+				&::before{
+					width:100%;
+					left: initial;
+					transform: inherit;
+					-webkit-transform: inherit;
+					-ms-transform: inherit;
+	
+						right: 14px;
+					@media screen and (max-width: $bp-sp) {
+						right: 7px;
+					}
+				}
+
+			}
+	
+			button{
+				width: 14px;
+				height: 14px;				
+				&::before{
+					width: 14px;
+					height: 14px;
+					@media screen and (max-width: $bp-sp) {
+						line-height: 14px;
+					}
+				}
+			}
+		}
+	}	
 }
 
 .info{
@@ -1549,12 +1661,12 @@ a.link{
 }
 
 
-.br_sp{
+.no_sp{
 	@media screen and (max-width: $bp-sp) {
 		display: none;
 	}
 }
-.span_pc{
+.no_pc{
 	display: none;
 	@media screen and (max-width: $bp-sp) {
 		display: initial;
@@ -2168,4 +2280,18 @@ a.link{
 
 .white{
 	color:white;
+}
+
+.fade-in {
+	opacity: 0;
+	transition-duration: 500ms;
+	transition-property: opacity, transform;
+}
+
+.fade-in-up {
+	transform: translate(0, 50px);
+}
+.scroll-in {
+	opacity: 1;
+	transform: translate(0, 0);
 }

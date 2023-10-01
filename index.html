@@ -41,7 +41,7 @@
 		<h1 class="color_white"><img src="./img/top/mv_text.png" style="width: 208px;height: 139px;" /></h1>
 		<div class="mv_wrap"></div>
 	</div>
-	<div class="about">
+	<div class="about fade-in fade-in-up">
 		<div class="wrap">
 			<div class="desc_1 jp_text">
 				庭良は日本が誇る伝統技術の元に<br>
@@ -66,7 +66,7 @@
 	</div>
 
 	<div class="list">
-		<div class="zouen">
+		<div class="zouen fade-in fade-in-up">
 			<picture class="img_1">
 				<source media="(max-width: 375px)" srcset="./img/top/zouen_img_1_sp.png">
 				<img src="./img/top/zouen_img_1.png" />
@@ -78,7 +78,7 @@
 			</div>
 		</div>
 
-		<div class="gaikoukouji">
+		<div class="gaikoukouji fade-in fade-in-up">
 			<picture class="img_1">
 				<source media="(max-width: 375px)" srcset="./img/top/gaikoukouji_img_1_sp.png">
 				<img src="./img/top/gaikoukouji_img_1.png" />
@@ -90,7 +90,7 @@
 			<div class="title">外構工事</div>
 		</div>
 
-		<div class="taiyou">
+		<div class="taiyou fade-in fade-in-up">
 			<picture class="img_1">
 				<source media="(max-width: 375px)" srcset="./img/top/taiyou_img_1_sp.png">
 				<img src="./img/top/taiyou_img_1.png" />
@@ -103,8 +103,21 @@
 		</div>
 	</div>
 
-	<div class="sekoujirei white">
-		<ul id="sekoujirei_img_slider" class="slider">
+	<div class="sekoujirei white fade-in fade-in-up">
+		<div class="title no_pc">施工事例</div>
+		<ul id="slider_img" class="slider">
+			<li>
+				<picture class="img_1">
+					<source media="(max-width: 375px)" srcset="./img/top/sekoujirei_img_1_sp.png">
+					<img src="./img/top/sekoujirei_img_1.png" />
+				</picture>
+			</li>
+			<li>
+				<picture class="img_1">
+					<source media="(max-width: 375px)" srcset="./img/top/sekoujirei_img_1_sp.png">
+					<img src="./img/top/sekoujirei_img_1.png" />
+				</picture>
+			</li>
 			<li>
 				<picture class="img_1">
 					<source media="(max-width: 375px)" srcset="./img/top/sekoujirei_img_1_sp.png">
@@ -113,9 +126,23 @@
 			</li>
 		</ul>
 		<div class="wrap">
-			<div class="title">施工事例</div>
+			<div class="title no_sp">施工事例</div>
 			<a href="" class="btn_link white link_1">一覧へ</a>
-			<div id="sekoujirei_text_slider" class="details">
+			<div id="slider_text" class="details">
+				<div class="detail">
+					<div class="sub_title">施工事例のタイトル</div>
+					<div class="hash_tag">#造園</div>
+					<div class="desc_1">
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					</div>
+				</div>
+				<div class="detail">
+					<div class="sub_title">施工事例のタイトル</div>
+					<div class="hash_tag">#造園</div>
+					<div class="desc_1">
+						テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+					</div>
+				</div>
 				<div class="detail">
 					<div class="sub_title">施工事例のタイトル</div>
 					<div class="hash_tag">#造園</div>
@@ -126,7 +153,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="info">
+	<div class="info fade-in fade-in-up">
 		<div class="wrap">
 			<div class="title">お知らせ</div>
 			<a href="" class="btn_link link_1">一覧へ</a>
@@ -151,5 +178,34 @@
 
 	<div id="footer"></div>
 </body>
+
+<script>
+	$('#slider_img').slick({
+		autoplay: false,
+		dots: true,
+		arrows: false,
+		infinite: true,
+		pauseOnHover: false,
+		centerPadding: "30%",
+		asNavFor: "#slider_text",
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					centerPadding: "0%",
+					slidesToShow: 1,
+					infinite: true,
+				},
+			},
+		],
+	})
+	$("#slider_text").slick({
+		draggable: false,
+		arrows: false,
+		dots: false,
+		centerPadding: "0%",
+		slidesToShow: 1,
+	})
+</script>
 
 </html>
