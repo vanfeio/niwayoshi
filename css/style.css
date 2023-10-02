@@ -361,6 +361,49 @@ input:focus::placeholder {
 /*---------------------------------------------------
 		common
 ----------------------------------------------------*/
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOut 1s 1.5s forwards;
+  z-index: 999;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loading__logo {
+  opacity: 0;
+  animation: logo_fade 2s 0.5s forwards;
+  width: 175px;
+}
+
+@keyframes logo_fade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
 header#header {
   width: 100%;
   padding: 16px 40px;
@@ -370,7 +413,7 @@ header#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 999;
+  z-index: 998;
 }
 @media screen and (max-width: 768px) {
   header#header {
