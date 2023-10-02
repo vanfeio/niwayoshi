@@ -647,14 +647,14 @@ a.link {
 .jp_text {
   writing-mode: vertical-rl;
   line-height: 2.2em;
-  letter-spacing: 0.6em;
+  letter-spacing: 0.3em;
   text-orientation: upright;
 }
 
 .title {
   position: relative;
   line-height: 1.4em;
-  letter-spacing: 1em;
+  letter-spacing: 0.5em;
   font-size: 7.5rem;
   width: 1em;
   font-family: "fot-tsukuaoldmin-pr6n", sans-serif;
