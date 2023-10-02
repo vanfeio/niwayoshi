@@ -1592,87 +1592,87 @@ a.link {
   padding: 1.5em 0;
 }
 
-#exsample #slider_img {
+#example #slider_img {
   counter-reset: number 0;
   margin-bottom: 80px;
 }
-#exsample #slider_img img {
+#example #slider_img img {
   width: 100%;
   height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (max-width: 768px) {
-  #exsample #slider_img img {
+  #example #slider_img img {
     height: 400px;
   }
 }
-#exsample #slider_img li {
+#example #slider_img li {
   position: relative;
 }
-#exsample #slider_img .num {
+#example #slider_img .num {
   writing-mode: vertical-rl;
   position: absolute;
   left: -20px;
   top: 0;
   font-size: 1.4rem;
 }
-#exsample #slider_img .num::before {
+#example #slider_img .num::before {
   counter-increment: number 1;
   content: "#" counter(number);
   margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
-  #exsample #slider_img .num {
+  #example #slider_img .num {
     display: none;
   }
 }
-#exsample #slider_img .slick-slide {
+#example #slider_img .slick-slide {
   margin-right: 2vw !important;
   margin-left: 2vw !important;
 }
 @media screen and (max-width: 768px) {
-  #exsample #slider_img .slick-slide {
+  #example #slider_img .slick-slide {
     margin: 0 !important;
   }
 }
-#exsample #slider_img .slick-dots {
+#example #slider_img .slick-dots {
   bottom: -30px;
 }
-#exsample #slider_img .slick-dots button:before {
+#example #slider_img .slick-dots button:before {
   font-size: 12px;
 }
-#exsample #slider_img .slick-dots li.slick-active button:before {
+#example #slider_img .slick-dots li.slick-active button:before {
   color: #000 !important;
 }
 @media screen and (max-width: 768px) {
-  #exsample #slider_img .slick-list {
+  #example #slider_img .slick-list {
     padding: 0 !important;
   }
 }
-#exsample #slider_text {
+#example #slider_text {
   margin-bottom: 100px;
 }
-#exsample #slider_text .slick-slide {
+#example #slider_text .slick-slide {
   margin-right: 2vw !important;
   margin-left: 2vw !important;
   opacity: 0;
 }
 @media screen and (max-width: 768px) {
-  #exsample #slider_text .slick-slide {
+  #example #slider_text .slick-slide {
     margin: 0 !important;
   }
 }
-#exsample #slider_text .slick-slide.slick-current {
+#example #slider_text .slick-slide.slick-current {
   opacity: 1;
 }
-#exsample #slider_text .category {
+#example #slider_text .category {
   font-size: 1.6rem;
   text-decoration: underline;
   margin-bottom: 1em;
 }
 @media screen and (max-width: 768px) {
-  #exsample #slider_text .category {
+  #example #slider_text .category {
     font-size: 1.4rem;
   }
 }
