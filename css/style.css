@@ -874,7 +874,6 @@ a.link {
 }
 @media screen and (max-width: 768px) {
   .list {
-    height: 2328px;
     width: 100%;
     position: relative;
     padding: 0 0 60px 0;
@@ -901,35 +900,37 @@ a.link {
   margin-top: 16px;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .list .zouen .desc {
+    display: block;
+    margin-top: -20vw;
+  }
+}
 .list .zouen .title {
   margin: 0 60px;
 }
 @media screen and (max-width: 768px) {
   .list .zouen .title {
-    position: absolute;
-    top: 321px;
     font-size: 5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
+    margin: 0 auto 20px;
   }
 }
 .list .zouen .desc_1 {
-  margin: auto 0;
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
   .list .zouen .desc_1 {
-    position: relative;
-    top: 85px;
-    width: 335px;
-    left: initial;
-    margin: 0 auto;
+    width: 90%;
   }
 }
 .list .list_2 {
   display: flex;
   flex-direction: row;
+}
+@media screen and (max-width: 768px) {
+  .list .list_2 {
+    display: block;
+  }
 }
 .list .gaikoukouji {
   margin: 0 auto;
@@ -940,30 +941,24 @@ a.link {
 }
 @media screen and (max-width: 768px) {
   .list .gaikoukouji {
-    height: 845px;
     width: 100%;
-    position: relative;
-    top: initial;
-    float: initial;
+    margin-top: 60px;
   }
 }
 .list .gaikoukouji .img_1 {
   width: 100%;
   height: auto;
 }
-@media screen and (max-width: 768px) {
-  .list .gaikoukouji .img_1 {
-    width: 100%;
-    height: auto;
-    -o-object-fit: scale-down;
-       object-fit: scale-down;
-    display: block;
-  }
-}
 .list .gaikoukouji .desc {
   display: flex;
   flex-direction: row-reverse;
   gap: 67px;
+}
+@media screen and (max-width: 768px) {
+  .list .gaikoukouji .desc {
+    display: block;
+    margin-top: -20vw;
+  }
 }
 .list .gaikoukouji .title {
   position: relative;
@@ -971,14 +966,8 @@ a.link {
 }
 @media screen and (max-width: 768px) {
   .list .gaikoukouji .title {
-    position: absolute;
-    top: 303px;
-    height: 261px;
     font-size: 5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
+    margin: 0 auto 20px;
   }
 }
 .list .gaikoukouji .desc_1 {
@@ -993,13 +982,8 @@ a.link {
 }
 @media screen and (max-width: 768px) {
   .list .gaikoukouji .desc_1 {
-    position: relative;
-    top: 175px;
-    width: 335px;
-    height: auto;
-    left: initial;
     margin: 0 auto;
-    float: initial;
+    width: 90%;
   }
 }
 .list .taiyou {
@@ -1011,10 +995,9 @@ a.link {
 }
 @media screen and (max-width: 768px) {
   .list .taiyou {
-    height: 800px;
     width: 100%;
-    float: initial;
-    top: initial;
+    float: none;
+    margin-top: 60px;
   }
 }
 .list .taiyou .img_1 {
@@ -1035,6 +1018,12 @@ a.link {
   flex-direction: row-reverse;
   gap: 67px;
 }
+@media screen and (max-width: 768px) {
+  .list .taiyou .desc {
+    display: block;
+    margin-top: -25vw;
+  }
+}
 .list .taiyou .title {
   float: right;
   position: relative;
@@ -1044,16 +1033,11 @@ a.link {
 }
 @media screen and (max-width: 768px) {
   .list .taiyou .title {
-    position: absolute;
-    top: 325px;
-    height: auto;
     font-size: 5rem;
-    letter-spacing: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    float: initial;
+    margin: 0 auto 20px;
+    float: none;
+    height: auto;
+    top: 0;
   }
 }
 .list .taiyou .desc_1 {
@@ -1068,10 +1052,8 @@ a.link {
 }
 @media screen and (max-width: 768px) {
   .list .taiyou .desc_1 {
-    float: initial;
-    width: 335px;
-    height: auto;
     margin: 0 auto;
+    width: 90%;
   }
 }
 
@@ -1090,52 +1072,25 @@ a.link {
 }
 .sekoujirei ul.slider {
   left: 0;
-  max-width: 1290px;
+  width: 95vw;
   position: relative;
 }
 @media screen and (max-width: 768px) {
   .sekoujirei ul.slider {
     position: relative;
     width: 100%;
-    height: 240px;
     margin-top: 30px;
   }
 }
-.sekoujirei ul.slider li {
-  position: relative;
-  top: 0;
-  height: 100%;
+.sekoujirei ul.slider li img {
+  width: 100%;
+  height: 556px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 768px) {
-  .sekoujirei ul.slider li {
-    right: initial;
-    top: initial;
-  }
-}
-.sekoujirei ul.slider li .img_1 {
-  max-height: 556px;
-  position: relative;
-  display: block;
-}
-@media screen and (max-width: 768px) {
-  .sekoujirei ul.slider li .img_1 {
-    max-height: initial;
-  }
-}
-.sekoujirei ul.slider li .img_1 img {
-  height: 100%;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-  -o-object-position: top;
-     object-position: top;
-}
-@media screen and (max-width: 768px) {
-  .sekoujirei ul.slider li .img_1 img {
-    height: 100%;
-    -o-object-fit: scale-down;
-       object-fit: scale-down;
-    -o-object-position: top;
-       object-position: top;
+  .sekoujirei ul.slider li img {
+    height: 300px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1152,65 +1107,49 @@ a.link {
   }
 }
 .sekoujirei .wrap {
-  width: 65vw;
+  width: 80%;
   margin: 0 auto;
   margin-top: 1.6em;
   padding-bottom: 105px;
   position: relative;
   display: flex;
-  gap: 14.5%;
+  justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
   .sekoujirei .wrap {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    margin-top: initial;
+    width: 90%;
+    flex-wrap: wrap;
   }
 }
 .sekoujirei .wrap .title {
   font-size: 3rem;
-  width: 200px;
   letter-spacing: 0;
-  left: 0;
+  width: 200px;
   margin-bottom: 2.2rem;
+  text-align: center;
+}
+.sekoujirei .wrap .title_box {
+  width: 20%;
+}
+@media screen and (max-width: 768px) {
+  .sekoujirei .wrap .title_box {
+    width: 100%;
+    order: 2;
+  }
 }
 .sekoujirei .wrap .link_1 {
   width: 200px;
-  left: 0;
-}
-@media screen and (max-width: 768px) {
-  .sekoujirei .wrap .link_1 {
-    position: absolute;
-    bottom: 368px;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    margin: 0;
-    text-align: center;
-  }
+  margin: 0 auto;
 }
 .sekoujirei .wrap .details {
-  max-width: 569px;
-  height: 243px;
+  width: 70%;
 }
 @media screen and (max-width: 768px) {
   .sekoujirei .wrap .details {
-    top: 0;
-    height: 237px;
-    width: 335px;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    margin: 0;
+    width: 100%;
+    order: 1;
+    margin-bottom: 30px;
   }
-}
-.sekoujirei .wrap .details .detail {
-  position: relative;
-  width: 100%;
-  height: 100%;
 }
 .sekoujirei .wrap .sub_title {
   font-size: 2rem;
@@ -1354,7 +1293,7 @@ a.link {
 }
 @media screen and (max-width: 768px) {
   .info .wrap {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
   }
 }
@@ -1616,7 +1555,7 @@ a.link {
 }
 @media screen and (max-width: 768px) {
   #example #slider_img img {
-    height: 400px;
+    height: 340px;
   }
 }
 #example #slider_img li {
@@ -2128,14 +2067,13 @@ a.link {
 }
 @media screen and (max-width: 768px) {
   #service .zouen .desc .img_1 {
-    width: 355px;
+    width: 100%;
     height: auto;
     bottom: initial;
     -o-object-fit: scale-down;
        object-fit: scale-down;
     position: absolute;
-    top: -140px;
-    left: -20px;
+    bottom: 0;
   }
 }
 #service .zouen .desc .title {
