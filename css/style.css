@@ -760,8 +760,7 @@ a.link {
 
 .about {
   overflow: hidden;
-  width: 100%;
-  height: 1058px;
+  width: 100vw;
   background: url(../img/top/top_about_bg.png) no-repeat center center/cover;
   background-position: 0% 0%;
   padding: 79px 0 99px 0;
@@ -770,26 +769,59 @@ a.link {
 }
 @media screen and (max-width: 768px) {
   .about {
-    height: 925px;
-    padding: 0;
+    padding: 18px 0 51px 0;
   }
 }
 .about .wrap {
   position: relative;
-  width: 900px;
+  width: 65vw;
   margin: 0 auto;
   height: 100%;
+  display: flex;
 }
 @media screen and (max-width: 768px) {
   .about .wrap {
     width: 100%;
   }
 }
+.about .wrap .left {
+  position: relative;
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .about .wrap .left {
+    position: absolute;
+    width: 100%;
+  }
+}
+.about .wrap .right {
+  position: relative;
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .about .wrap .right {
+    width: 100%;
+  }
+}
+.about .wrap .img_1 {
+  position: relative;
+  display: block;
+  width: 80.4%;
+  margin-top: 305px;
+}
+@media screen and (max-width: 768px) {
+  .about .wrap .img_1 {
+    position: relative;
+    height: 261px;
+  }
+  .about .wrap .img_1 img {
+    width: auto;
+    height: 100%;
+  }
+}
 .about .wrap .desc_1 {
-  position: absolute;
-  top: 0;
-  right: 159px;
   height: 426px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
   .about .wrap .desc_1 {
@@ -800,82 +832,43 @@ a.link {
     height: 261px;
   }
 }
-.about .wrap .img_1 {
-  position: absolute;
-  top: 305px;
-  left: 0px;
-  width: 362px;
-  height: 482px;
-  display: block;
-}
-@media screen and (max-width: 768px) {
-  .about .wrap .img_1 {
-    top: auto;
-    left: 0;
-    height: 247px;
-    width: 335px;
-    margin-left: 0;
-  }
-}
-.about .wrap .img_2 {
-  position: absolute;
-  top: 425px;
-  right: 0px;
-  width: 450px;
-  height: 243px;
-}
 @media screen and (max-width: 768px) {
   .about .wrap .img_2 {
-    top: 509px;
+    position: relative;
     margin: 0 auto;
-    float: right;
-    height: 144px;
-    width: 233px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 248px;
+  }
+  .about .wrap .img_2 img {
+    width: 62.1%;
   }
 }
-.about .wrap .img_2 img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 .about .wrap .desc_2 {
-  position: absolute;
-  top: 706px;
-  right: 0;
-  width: 450px;
-  line-height: 2em;
+  margin-top: 38px;
 }
 @media screen and (max-width: 768px) {
   .about .wrap .desc_2 {
-    position: absolute;
-    top: 671px;
-    width: 335px;
-    min-height: 104px;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
+    width: 89.3%;
+    margin: 0 auto;
+    margin-top: 27px;
   }
 }
 .about .wrap .link_1 {
-  position: absolute;
-  top: 825px;
-  right: 0;
-  width: 450px;
+  margin-top: 38px;
 }
 @media screen and (max-width: 768px) {
   .about .wrap .link_1 {
-    top: 811px;
-    width: 335px;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
+    width: 89.3%;
+    margin: 0 auto;
+    margin-top: 27px;
   }
 }
 
 .list {
-  height: 2108px;
-  width: 900px;
+  width: 65vw;
   margin: 0 auto;
   padding: 166px 0 192px 0;
 }
@@ -890,16 +883,11 @@ a.link {
 .list .zouen {
   position: relative;
   margin: 0 auto;
-  height: 633px;
-}
-@media screen and (max-width: 768px) {
-  .list .zouen {
-    height: 682px;
-  }
 }
 .list .zouen .img_1 {
   width: 100%;
   height: auto;
+  display: block;
 }
 @media screen and (max-width: 768px) {
   .list .zouen .img_1 {
@@ -909,10 +897,12 @@ a.link {
     display: block;
   }
 }
+.list .zouen .desc {
+  margin-top: 16px;
+  display: flex;
+}
 .list .zouen .title {
-  top: 10px;
-  left: 60px;
-  height: 216px;
+  margin: 0 60px;
 }
 @media screen and (max-width: 768px) {
   .list .zouen .title {
@@ -926,9 +916,7 @@ a.link {
   }
 }
 .list .zouen .desc_1 {
-  position: absolute;
-  top: 478px;
-  left: 200px;
+  margin: auto 0;
 }
 @media screen and (max-width: 768px) {
   .list .zouen .desc_1 {
@@ -939,13 +927,16 @@ a.link {
     margin: 0 auto;
   }
 }
+.list .list_2 {
+  display: flex;
+  flex-direction: row;
+}
 .list .gaikoukouji {
-  float: left;
-  top: 134px;
-  width: 400px;
-  height: 942px;
-  position: relative;
   margin: 0 auto;
+  margin-top: 134px;
+  margin-left: 0;
+  width: 44.4%;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .list .gaikoukouji {
@@ -957,8 +948,8 @@ a.link {
   }
 }
 .list .gaikoukouji .img_1 {
-  width: 400px;
-  height: 439px;
+  width: 100%;
+  height: auto;
 }
 @media screen and (max-width: 768px) {
   .list .gaikoukouji .img_1 {
@@ -969,11 +960,14 @@ a.link {
     display: block;
   }
 }
+.list .gaikoukouji .desc {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 67px;
+}
 .list .gaikoukouji .title {
-  float: right;
   position: relative;
-  top: 37px;
-  height: 466px;
+  margin: auto 0;
 }
 @media screen and (max-width: 768px) {
   .list .gaikoukouji .title {
@@ -988,11 +982,9 @@ a.link {
   }
 }
 .list .gaikoukouji .desc_1 {
-  float: left;
   position: relative;
-  top: 143px;
-  width: 258px;
-  height: 308px;
+  margin-top: 143px;
+  margin-bottom: 31px;
   font-size: 1.2rem;
 }
 .list .gaikoukouji .desc_1 a {
@@ -1011,12 +1003,11 @@ a.link {
   }
 }
 .list .taiyou {
-  top: 220px;
-  float: right;
-  width: 400px;
-  height: 897px;
-  position: relative;
   margin: 0 auto;
+  margin-top: 220px;
+  float: right;
+  width: 44.4%;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .list .taiyou {
@@ -1027,8 +1018,8 @@ a.link {
   }
 }
 .list .taiyou .img_1 {
-  width: 400px;
-  height: 523px;
+  width: 100%;
+  height: auto;
 }
 @media screen and (max-width: 768px) {
   .list .taiyou .img_1 {
@@ -1039,25 +1030,10 @@ a.link {
     display: block;
   }
 }
-.list .taiyou .desc_1 {
-  float: left;
-  position: relative;
-  top: 139px;
-  width: 258px;
-  height: 235px;
-  font-size: 1.2rem;
-}
-.list .taiyou .desc_1 a {
-  top: 0.4em;
-  position: relative;
-}
-@media screen and (max-width: 768px) {
-  .list .taiyou .desc_1 {
-    float: initial;
-    width: 335px;
-    height: auto;
-    margin: 0 auto;
-  }
+.list .taiyou .desc {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 67px;
 }
 .list .taiyou .title {
   float: right;
@@ -1080,11 +1056,28 @@ a.link {
     float: initial;
   }
 }
+.list .taiyou .desc_1 {
+  position: relative;
+  margin-top: 143px;
+  margin-bottom: 31px;
+  font-size: 1.2rem;
+}
+.list .taiyou .desc_1 a {
+  top: 0.4em;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .list .taiyou .desc_1 {
+    float: initial;
+    width: 335px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
 
 .sekoujirei {
   background-color: black;
   color: white;
-  height: 1125px;
   padding-top: 154px;
 }
 @media screen and (max-width: 768px) {
@@ -1106,19 +1099,6 @@ a.link {
     width: 100%;
     height: 240px;
     margin-top: 30px;
-    /*
-    position:absolute;
-    width:100%;
-    height:240px;
-    left:0;
-    top:84px;
-    */
-    /*
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    */
   }
 }
 .sekoujirei ul.slider li {
@@ -1172,10 +1152,13 @@ a.link {
   }
 }
 .sekoujirei .wrap {
-  width: 900px;
+  width: 65vw;
   margin: 0 auto;
   margin-top: 1.6em;
+  padding-bottom: 105px;
   position: relative;
+  display: flex;
+  gap: 14.5%;
 }
 @media screen and (max-width: 768px) {
   .sekoujirei .wrap {
@@ -1191,17 +1174,6 @@ a.link {
   letter-spacing: 0;
   left: 0;
   margin-bottom: 2.2rem;
-  /*
-  @media screen and (max-width: $bp-sp) {
-  	top:19px;
-  	left: 50%;
-  	transform: translateX(-50%);
-  	-webkit-transform: translateX(-50%);
-  	-ms-transform: translateX(-50%);				
-  	margin: 0;
-      text-align: center;
-  }
-  */
 }
 .sekoujirei .wrap .link_1 {
   width: 200px;
@@ -1220,11 +1192,8 @@ a.link {
   }
 }
 .sekoujirei .wrap .details {
-  width: 569px;
+  max-width: 569px;
   height: 243px;
-  position: absolute;
-  top: 37px;
-  left: 331px;
 }
 @media screen and (max-width: 768px) {
   .sekoujirei .wrap .details {
@@ -1379,7 +1348,7 @@ a.link {
   }
 }
 .info .wrap {
-  max-width: 900px;
+  max-width: 65vw;
   margin: 0 auto;
   position: relative;
 }
@@ -1841,7 +1810,7 @@ a.link {
 #about .greeting_wrap {
   position: relative;
   margin: 0 auto;
-  width: 900px;
+  width: 65vw;
   height: 100%;
 }
 @media screen and (max-width: 768px) {

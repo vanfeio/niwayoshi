@@ -777,32 +777,63 @@ a.link{
 
 .about {
 	overflow: hidden;
-	width: 100%;
-	height: 1058px;
+	width: 100vw;
+	//height: 1058px;
 	background: url(../img/top/top_about_bg.png) no-repeat center center/cover;
 	background-position: 0% 0%;
 	padding: 79px 0 99px 0;
 	position: relative;
 	overflow: hidden;
 	@media screen and (max-width: $bp-sp) {
-		height:925px;
-		//padding: 18px 0 99px 0;
-		padding: 0;
+		padding: 18px 0 51px 0;
 	}
 
 	.wrap{
 		position: relative;
-		width: 900px;
+		width: calc(100vw - 35vw);
 		margin: 0 auto;
 		height:100%;
 		@media screen and (max-width: $bp-sp) {
 			width: 100%;
 		}
+
+		display: flex;
+		.left{
+			position: relative;
+			width: 50%;
+			@media screen and (max-width: $bp-sp) {
+				position: absolute;
+				width: 100%;
+			}
+
+		}
+		.right{
+			position: relative;
+			width: 50%;
+			@media screen and (max-width: $bp-sp) {
+				width: 100%;
+			}
+		}
+
+		.img_1{
+			position: relative;
+			display: block;
+			width:80.4%;
+			margin-top:305px;
+
+			@media screen and (max-width: $bp-sp) {
+				position: relative;
+				height: 261px;
+				img{
+					width:auto;
+					height: 100%;
+				}
+			}			
+		}
+
 		.desc_1{
-			position: absolute;
-			top:0;
-			right: 159px;
 			height:426px;
+			margin: 0 auto;
 			@media screen and (max-width: $bp-sp) {
 				position: relative;
 				top: auto;
@@ -810,78 +841,42 @@ a.link{
 				right: auto;
 				height: 261px;
 			}
+
 		}
-	
-		.img_1 {
-			position:absolute;
-			top:305px;
-			left:0px;
-			width: 362px;
-			height: 482px;
-			display:block;
+		.img_2{
 			@media screen and (max-width: $bp-sp) {
-				top: auto;
-				left: 0;
-				height: 247px;
-				width: 335px;
-				margin-left: 0;
-			}
-		}
-		.img_2 {
-			position:absolute;
-			top:425px;
-			right:0px;
-			width: 450px;
-			height: 243px;
-			@media screen and (max-width: $bp-sp) {
-				top: 509px;
+				position: relative;
 				margin: 0 auto;
-				float:right;
-				height: 144px;
-				width: 233px;
-				
-			}
-			img{object-fit: cover;}
-		}
-		.desc_2 {
-			position:absolute;
-			top:706px;
-			right:0;
-			width:450px;
-			line-height: 2em;
-	
-			@media screen and (max-width: $bp-sp) {
-				position: absolute;
-				top:671px;
-				width:335px;
-				min-height:104px;
-
-				left: 50%;
-				transform: translateX(-50%);
-				-webkit-transform: translateX(-50%);
-				-ms-transform: translateX(-50%);
+				height: auto;
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+				margin-top:248px;				
+				img{
+					width: 62.1%;
+				}
 			}
 		}
-		.link_1 {
-			position:absolute;
-			top:825px;
-			right:0;
-			width:450px;
+		.desc_2{
+			margin-top:38px;
 			@media screen and (max-width: $bp-sp) {
-				top:811px;
-				width:335px;
-				left: 50%;
-				transform: translateX(-50%);
-				-webkit-transform: translateX(-50%);
-				-ms-transform: translateX(-50%);
-
+				width:89.3%;
+				margin: 0 auto;
+				margin-top: 27px;
+			}
+		}
+		.link_1{
+			margin-top:38px;
+			@media screen and (max-width: $bp-sp) {
+				width:89.3%;
+				margin: 0 auto;
+				margin-top: 27px;
 			}
 		}
 	}
 }
 .list{
-	height: 2108px;
-    width: 900px;
+    width: calc(100vw - 35vw);
     margin: 0 auto;
     padding: 166px 0 192px 0;
 	@media screen and (max-width: $bp-sp) {
@@ -893,23 +888,27 @@ a.link{
 	.zouen{
 		position:relative;
 		margin:0 auto;
-		height:633px;
 		@media screen and (max-width: $bp-sp) {
-			height:682px;
 		}
 		.img_1{
 			width: 100%;
 			height:auto;
+			display:block;
 			@media screen and (max-width: $bp-sp) {
 				height:auto;
 				object-fit: scale-down;
 				display:block;
 			}
 		}
+
+		.desc{
+			margin-top:16px;
+			display: flex;
+			@media screen and (max-width: $bp-sp) {
+			}
+		}
 		.title{
-			top: 10px;
-			left: 60px;
-			height: 216px;
+			margin:0 60px;
 			@media screen and (max-width: $bp-sp) {
 				position:absolute;
 				top:321px;
@@ -923,9 +922,7 @@ a.link{
 	
 		}
 		.desc_1{
-			position: absolute;
-			top: 478px;
-			left: 200px;
+			margin:auto 0;
 			@media screen and (max-width: $bp-sp) {
 				position:relative;
 				top:85px;
@@ -936,14 +933,18 @@ a.link{
 	
 		}
 	}
+
+	.list_2{
+		display: flex;
+		flex-direction: row;
+	}
 	
 	.gaikoukouji{
-		float:left;
-		top: 134px;
-		width: 400px;
-		height: 942px;
+		margin: 0 auto;
+		margin-top: 134px;
+		margin-left:0;
+		width: 44.4%;
 		position: relative;
-		margin: 0 auto;		
 		@media screen and (max-width: $bp-sp) {
 			height: 845px;
 			width:100%;
@@ -952,8 +953,8 @@ a.link{
 			float:initial;
 		}
 		.img_1{
-			width: 400px;
-			height: 439px;
+			width: 100%;
+			height: auto;
 			@media screen and (max-width: $bp-sp) {
 				width:100%;
 				height:auto;
@@ -962,11 +963,14 @@ a.link{
 			}
 
 		}
+		.desc{
+			display: flex;
+			flex-direction: row-reverse;
+			gap:67px;
+		}
 		.title{
-			float:right;
 			position: relative;
-			top:37px;
-			height:466px;
+			margin:auto 0;
 			@media screen and (max-width: $bp-sp) {
 				position:absolute;
 				top:303px;
@@ -980,11 +984,9 @@ a.link{
 			}			
 		}
 		.desc_1{
-			float:left;
 			position: relative;
-			top:143px;
-			width:258px;
-			height:308px;
+			margin-top:143px;
+			margin-bottom:31px;
 			font-size: 1.2rem;
 			a{
 				top: 0.4em;
@@ -1004,12 +1006,11 @@ a.link{
 	}
 	
 	.taiyou{
-		top:220px;
+		margin: 0 auto;
+		margin-top:220px;
 		float:right;
-		width: 400px;
-		height: 897px;
+		width: 44.4%;
 		position: relative;
-		margin: 0 auto;		
 
 		@media screen and (max-width: $bp-sp) {
 			height:800px;
@@ -1018,8 +1019,8 @@ a.link{
 			top:initial;
 		}
 		.img_1{
-			width: 400px;
-			height: 523px;
+			width:100%;
+			height: auto;
 			@media screen and (max-width: $bp-sp) {
 				width:100%;
 				height:auto;
@@ -1027,25 +1028,13 @@ a.link{
 				display:block;
 			}
 		}
-		.desc_1{
-			float:left;
-			position: relative;
-			top:139px;
-			width:258px;
-			height:235px;
-			font-size: 1.2rem;
-			a{
-				top: 0.4em;
-				position: relative;
-			}
-			@media screen and (max-width: $bp-sp) {
-				float:initial;
-				width:335px;
-				height:auto;
-				margin:0 auto;
-			}
 
+		.desc{
+			display: flex;
+			flex-direction: row-reverse;
+			gap:67px;
 		}
+
 		.title{
 			float:right;
 			position: relative;
@@ -1069,6 +1058,25 @@ a.link{
 
 		}
 
+
+		.desc_1{
+			position: relative;
+			margin-top: 143px;
+			margin-bottom: 31px;
+			font-size: 1.2rem;
+			a{
+				top: 0.4em;
+				position: relative;
+			}
+			@media screen and (max-width: $bp-sp) {
+				float:initial;
+				width:335px;
+				height:auto;
+				margin:0 auto;
+			}
+
+		}		
+
 	}
 	
 }
@@ -1076,7 +1084,6 @@ a.link{
 .sekoujirei{
 	background-color: black;
 	color:white;
-	height:1125px;
 	padding-top:154px;
 	@media screen and (max-width: $bp-sp) {
 		//display: none;
@@ -1096,24 +1103,10 @@ a.link{
 			width:100%;
 			height:240px;
 			margin-top: 30px;
-			/*
-			position:absolute;
-			width:100%;
-			height:240px;
-			left:0;
-			top:84px;
-			*/
-			/*
-			left: 50%;
-			transform: translateX(-50%);
-			-webkit-transform: translateX(-50%);
-			-ms-transform: translateX(-50%);
-			*/
 		}		
 		li{
 			position: relative;
 			top:0;
-			//right: 110px;
 			height:100%;
 			@media screen and (max-width: $bp-sp) {
 				right:initial;
@@ -1121,8 +1114,6 @@ a.link{
 			}		
 			
 			.img_1{
-			//margin-top: 154px;
-			//padding-right:110px;
 			max-height: 556px;
 			position: relative;
 			display: block;
@@ -1159,10 +1150,13 @@ a.link{
 		}		
 	}
 	.wrap{
-		width:900px;
+		width:calc(100vw - 35vw);
 		margin: 0 auto;
 		margin-top:1.6em;
+		padding-bottom:105px;
 		position: relative;
+		display: flex;
+		gap:14.5%;
 		@media screen and (max-width: $bp-sp) {
 			width:100%;
 			height:100%;
@@ -1176,17 +1170,6 @@ a.link{
 			letter-spacing: 0;
 			left:0;
 			margin-bottom:2.2rem;
-			/*
-			@media screen and (max-width: $bp-sp) {
-				top:19px;
-				left: 50%;
-				transform: translateX(-50%);
-				-webkit-transform: translateX(-50%);
-				-ms-transform: translateX(-50%);				
-				margin: 0;
-			    text-align: center;
-			}
-			*/
 		}
 		.link_1{
 			width:200px;
@@ -1203,11 +1186,8 @@ a.link{
 			}
 		}
 		.details{
-			width:569px;
+			max-width:569px;
 			height:243px;
-			position:absolute;
-			top:37px;
-			left:331px;
 			@media screen and (max-width: $bp-sp) {
 				top: 0;
 				height:237px;
@@ -1350,7 +1330,7 @@ a.link{
 	}
 
 	.wrap{
-		max-width:900px;
+		max-width:calc(100vw - 35vw);
 		margin: 0 auto;
 		position: relative;
 		@media screen and (max-width: $bp-sp) {
@@ -1791,7 +1771,7 @@ a.link{
 		&_wrap{
 			position: relative;
 			margin:0 auto;
-			width:900px;
+			width:calc(100vw - 35vw);
 			height: 100%;
 			@media screen and (max-width: $bp-sp) {
 				width:100%;
