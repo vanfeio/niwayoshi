@@ -917,7 +917,7 @@ a.link{
 	
 		}
 		.desc_1{
-			margin:0 auto;
+			margin: auto;
 			@media screen and (max-width: $bp-sp) {
 				width: 90%;
 			}
@@ -1672,7 +1672,7 @@ a.link{
 					font-size:3rem;
 					margin:0 auto;
 					margin-top:65px;
-					height:240px;
+					height: 210px;
 				}
 			}
 			.text_2{
@@ -1696,7 +1696,6 @@ a.link{
 	.greeting{
 		position: relative;
 		padding:170px 0;
-		height: 1230px;
 		@media screen and (max-width: $bp-sp) {
 			padding:28px 20px;
 			padding-bottom: 56px;
@@ -1711,10 +1710,18 @@ a.link{
 				width:100%;
 				margin:0;
 			}
+			.flex{
+				display: flex;
+				@media screen and (max-width: $bp-sp) {
+					display: block;
+					width: 100%;
+					position: relative;
+				}
+			}
 			.img_1{
-				position: absolute;
-				width:588px;
-				height:569px;
+				position: relative;
+				width:65.3%;
+				height:auto;
 				display: block;
 				object-fit: scale-down;
 				@media screen and (max-width: $bp-sp) {
@@ -1724,14 +1731,13 @@ a.link{
 				}
 			}
 			.title{
-				font-size: 7.5rem;
-				width:85px;
-				position: absolute;
-				right: 115px;
-				top: 135px;
+				font-size: 5.355vw;
+				position: relative;
+				margin: auto;
 				@media screen and (max-width: $bp-sp) {
+					position: absolute;
 					font-size: 5rem;
-					top:290px;
+					bottom: -14vh;
 					right:initial;
 					left: 50%;
 					transform: translateX(-50%);
@@ -1741,8 +1747,9 @@ a.link{
 				}
 			}
 			.desc_1{
-				position: absolute;
-				top: 635px;				
+				position: relative;
+				width: 100%;
+				margin-top: 66px;
 				line-height: 3.0rem;
 				@media screen and (max-width: $bp-sp) {
 					position: relative;
@@ -1751,12 +1758,10 @@ a.link{
 				}
 			}
 			.desc_2{
-				position: absolute;
-				bottom: 0px;				
-				left: 50%;
-				transform: translateX(-50%);
-				-webkit-transform: translateX(-50%);
-				-ms-transform: translateX(-50%);
+				position: relative;
+				margin:0 auto;
+				margin-top: 18px;
+				text-align: center;
 				@media screen and (max-width: $bp-sp) {
 					position: relative;
 					margin:0 auto;
