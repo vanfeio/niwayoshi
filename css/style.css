@@ -2020,19 +2020,42 @@ a.link {
   width: 100%;
 }
 #service .zouen .column {
-  height: 400px;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 145px;
 }
 @media screen and (max-width: 768px) {
   #service .zouen .column {
     position: relative;
     height: auto;
     width: 100%;
-    padding: 0 20px;
+    padding-bottom: 0;
+  }
+}
+#service .zouen .column .center {
+  width: 64.28vw;
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  gap: 110px;
+}
+@media screen and (max-width: 768px) {
+  #service .zouen .column .center {
+    display: block;
   }
 }
 #service .zouen .column .title {
-  top: 37px;
+  position: relative;
+  margin: 0 auto;
+  margin-left: 31px;
+  margin-top: 37px;
+  margin-right: 0;
+  font-size: 5rem;
+  /*
+  top:37px;
   left: 281px;
+  */
 }
 @media screen and (max-width: 768px) {
   #service .zouen .column .title {
@@ -2043,9 +2066,9 @@ a.link {
   }
 }
 #service .zouen .column .desc_1 {
-  width: 560px;
-  top: 74px;
-  left: 472px;
+  position: relative;
+  margin-top: 74px;
+  font-size: 2.857vw;
 }
 @media screen and (max-width: 768px) {
   #service .zouen .column .desc_1 {
@@ -2054,23 +2077,32 @@ a.link {
     left: initial;
     position: relative;
     font-size: 2rem;
+    margin: 0 auto;
     margin-top: 35px;
-    padding-bottom: 175px;
+    padding-bottom: 37px;
   }
 }
 #service .zouen .desc {
-  height: 520px;
+  width: 89.33vw;
+  height: auto;
+  position: relative;
+  bottom: 65px;
+  display: flex;
+  gap: 78px;
+  margin-bottom: 80px;
 }
 @media screen and (max-width: 768px) {
   #service .zouen .desc {
     width: 100%;
-    height: 400px;
-    padding: 0 20px;
+    height: auto;
+    position: relative;
+    display: block;
+    bottom: initial;
   }
 }
 #service .zouen .desc .img_1 {
-  bottom: 65px;
-  width: 651px;
+  width: 46.42vw;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   #service .zouen .desc .img_1 {
@@ -2079,27 +2111,48 @@ a.link {
     bottom: initial;
     -o-object-fit: scale-down;
        object-fit: scale-down;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+}
+#service .zouen .desc .flex {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 768px) {
+  #service .zouen .desc .flex {
+    position: relative;
+    display: block;
+    flex-direction: initial;
+    flex: initial;
+    justify-content: initial;
+    margin-top: 15px;
+    bottom: initial;
+    width: 89.33vw;
+    margin: 0 auto;
   }
 }
 #service .zouen .desc .title {
-  left: 730px;
-  top: 225px;
+  position: relative;
+  font-size: 2.857vw;
 }
 @media screen and (max-width: 768px) {
   #service .zouen .desc .title {
     position: relative;
-    padding-top: 150px;
+    padding-top: 15px;
     left: initial;
     top: initial;
     font-size: 3rem;
   }
 }
 #service .zouen .desc .desc_2 {
-  bottom: 65px;
-  left: 730px;
-  width: 420px;
+  margin-top: 42px;
+  position: relative;
+  max-width: 420px;
 }
 @media screen and (max-width: 768px) {
   #service .zouen .desc .desc_2 {
@@ -2109,7 +2162,6 @@ a.link {
     width: 100%;
     font-size: 1.2rem;
     margin-top: 18px;
-    padding-bottom: 78px;
   }
 }
 #service .gaikoukouji {
@@ -2117,92 +2169,140 @@ a.link {
   width: 100%;
 }
 #service .gaikoukouji .column {
-  height: 565px;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 145px;
 }
 @media screen and (max-width: 768px) {
   #service .gaikoukouji .column {
     position: relative;
     height: auto;
     width: 100%;
-    padding: 0 20px;
+    padding-bottom: 0;
+  }
+}
+#service .gaikoukouji .column .center {
+  width: 64.28vw;
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  gap: 110px;
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 768px) {
+  #service .gaikoukouji .column .center {
+    display: block;
   }
 }
 #service .gaikoukouji .column .title {
-  top: 64px;
-  right: 250px;
+  position: relative;
+  margin: 0 auto;
+  margin-left: 31px;
+  margin-top: 37px;
+  margin-right: 0;
+  font-size: 5rem;
+  /*
+  top:37px;
+  left: 281px;
+  */
 }
 @media screen and (max-width: 768px) {
   #service .gaikoukouji .column .title {
     top: initial;
-    right: initial;
+    left: initial;
     margin: 0 auto;
-    padding-top: 65px;
+    padding-top: 35px;
   }
 }
 #service .gaikoukouji .column .desc_1 {
-  top: 190px;
-  left: 250px;
-  right: 450px;
-  height: 120px;
+  position: relative;
+  margin-top: 74px;
+  font-size: 2.857vw;
 }
 @media screen and (max-width: 768px) {
   #service .gaikoukouji .column .desc_1 {
     width: 100%;
     top: initial;
     left: initial;
-    right: initial;
-    height: initial;
     position: relative;
     font-size: 2rem;
-    margin-top: 40px;
-    padding-bottom: 190px;
+    margin: 0 auto;
+    margin-top: 35px;
+    padding-bottom: 37px;
   }
 }
 #service .gaikoukouji .desc {
-  height: 485px;
+  width: 89.33vw;
+  height: auto;
+  position: relative;
+  bottom: 65px;
+  display: flex;
+  gap: 78px;
+  margin-bottom: 80px;
 }
 @media screen and (max-width: 768px) {
   #service .gaikoukouji .desc {
     width: 100%;
-    height: 500px;
-    padding: 0 20px;
+    height: auto;
+    position: relative;
+    display: block;
+    bottom: initial;
   }
 }
 #service .gaikoukouji .desc .img_1 {
-  bottom: 90px;
-  width: 651px;
+  width: 46.42vw;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   #service .gaikoukouji .desc .img_1 {
-    width: 355px;
+    width: 100%;
     height: auto;
     bottom: initial;
     -o-object-fit: scale-down;
        object-fit: scale-down;
-    position: absolute;
-    top: -140px;
-    left: -20px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+}
+#service .gaikoukouji .desc .flex {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 768px) {
+  #service .gaikoukouji .desc .flex {
+    position: relative;
+    display: block;
+    flex-direction: initial;
+    flex: initial;
+    justify-content: initial;
+    margin-top: 15px;
+    bottom: initial;
+    width: 89.33vw;
+    margin: 0 auto;
   }
 }
 #service .gaikoukouji .desc .title {
-  left: 730px;
-  bottom: 313px;
+  position: relative;
+  font-size: 2.857vw;
 }
 @media screen and (max-width: 768px) {
   #service .gaikoukouji .desc .title {
     position: relative;
-    padding-top: 150px;
+    padding-top: 15px;
     left: initial;
     top: initial;
-    bottom: initial;
     font-size: 3rem;
-    letter-spacing: 0;
   }
 }
 #service .gaikoukouji .desc .desc_2 {
-  bottom: 90px;
-  left: 730px;
-  width: 420px;
+  margin-top: 42px;
+  position: relative;
+  max-width: 420px;
 }
 @media screen and (max-width: 768px) {
   #service .gaikoukouji .desc .desc_2 {
@@ -2212,26 +2312,49 @@ a.link {
     width: 100%;
     font-size: 1.2rem;
     margin-top: 18px;
-    padding-bottom: 78px;
   }
 }
 #service .taiyou {
+  position: relative;
   width: 100%;
 }
 #service .taiyou .column {
-  height: 510px;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 145px;
 }
 @media screen and (max-width: 768px) {
   #service .taiyou .column {
     position: relative;
     height: auto;
     width: 100%;
-    padding: 0 20px;
+    padding-bottom: 0;
+  }
+}
+#service .taiyou .column .center {
+  width: 64.28vw;
+  display: flex;
+  height: 100%;
+  margin: 0 auto;
+  gap: 110px;
+}
+@media screen and (max-width: 768px) {
+  #service .taiyou .column .center {
+    display: block;
   }
 }
 #service .taiyou .column .title {
-  top: 37px;
+  position: relative;
+  margin: 0 auto;
+  margin-left: 31px;
+  margin-top: 37px;
+  margin-right: 0;
+  font-size: 5rem;
+  /*
+  top:37px;
   left: 281px;
+  */
 }
 @media screen and (max-width: 768px) {
   #service .taiyou .column .title {
@@ -2242,68 +2365,93 @@ a.link {
   }
 }
 #service .taiyou .column .desc_1 {
-  width: 730px;
-  top: 145px;
-  left: 472px;
+  position: relative;
+  margin-top: 74px;
+  font-size: 2.857vw;
 }
 @media screen and (max-width: 768px) {
   #service .taiyou .column .desc_1 {
     width: 100%;
     top: initial;
     left: initial;
-    right: initial;
-    height: initial;
     position: relative;
     font-size: 2rem;
+    margin: 0 auto;
     margin-top: 35px;
-    padding-bottom: 190px;
+    padding-bottom: 37px;
   }
 }
 #service .taiyou .desc {
-  height: 550px;
+  width: 89.33vw;
+  height: auto;
+  position: relative;
+  bottom: 65px;
+  display: flex;
+  gap: 78px;
+  margin-bottom: 80px;
 }
 @media screen and (max-width: 768px) {
   #service .taiyou .desc {
     width: 100%;
-    height: 500px;
-    padding: 0 20px;
+    height: auto;
+    position: relative;
+    display: block;
+    bottom: initial;
   }
 }
 #service .taiyou .desc .img_1 {
-  bottom: 140px;
-  width: 651px;
+  width: 46.42vw;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   #service .taiyou .desc .img_1 {
-    width: 355px;
+    width: 100%;
     height: auto;
     bottom: initial;
     -o-object-fit: scale-down;
        object-fit: scale-down;
-    position: absolute;
-    top: -140px;
-    left: -20px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+}
+#service .taiyou .desc .flex {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 768px) {
+  #service .taiyou .desc .flex {
+    position: relative;
+    display: block;
+    flex-direction: initial;
+    flex: initial;
+    justify-content: initial;
+    margin-top: 15px;
+    bottom: initial;
+    width: 89.33vw;
+    margin: 0 auto;
   }
 }
 #service .taiyou .desc .title {
-  left: 730px;
-  top: 110px;
+  position: relative;
+  font-size: 2.857vw;
 }
 @media screen and (max-width: 768px) {
   #service .taiyou .desc .title {
     position: relative;
-    padding-top: 150px;
+    padding-top: 15px;
     left: initial;
     top: initial;
-    bottom: initial;
     font-size: 3rem;
-    letter-spacing: 0;
   }
 }
 #service .taiyou .desc .desc_2 {
-  bottom: 140px;
-  left: 730px;
-  width: 420px;
+  margin-top: 42px;
+  position: relative;
+  max-width: 420px;
 }
 @media screen and (max-width: 768px) {
   #service .taiyou .desc .desc_2 {
@@ -2313,7 +2461,6 @@ a.link {
     width: 100%;
     font-size: 1.2rem;
     margin-top: 18px;
-    padding-bottom: 78px;
   }
 }
 #service .column {
